@@ -12,7 +12,7 @@ feature 'Updating a bookmark' do
         click_button('Submit')
 
         expect(current_path).to eq '/bookmarks'
-        expect(page).not_to have_link('https://en-gb.facebook.com/')
-        expect(page).to have_link('facebook', href: 'https://en-gb.facebook.com/')
+        expect(page).not_to have_link('facebook',href: 'https://en-gb.facebook.com/')
+        expect(page).to have_link('Snakers Academy', href: 'http://www.snakersacademy.com')
     end
 end

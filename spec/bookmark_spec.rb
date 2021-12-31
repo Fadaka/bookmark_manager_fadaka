@@ -45,9 +45,9 @@ describe Bookmark do
   describe '.update' do
     it 'updates the bookmark with the given data' do
       bookmark = Bookmark.create( url: 'https://www.bbc.co.uk/news', title: 'bbc news')
-      updated_bookmark = bookmark.update(id: bookmark.id, url: 'https://news.sky.com/uk', title: 'sky news')
+      updated_bookmark = Bookmark.update(id: bookmark.id, url: 'https://news.sky.com/uk', title: 'sky news')
 
-      expect(updated_bookmark).to be_a bookmark
+      expect(updated_bookmark).to be_a Bookmark
       expect(updated_bookmark.id).to eq bookmark.id
       expect(updated_bookmark.title).to eq 'sky news'
       expect(updated_bookmark.url).to eq 'https://news.sky.com/uk' 
